@@ -5,9 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>장소영 포트폴리오</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/default.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
   <header>
@@ -17,8 +21,8 @@
         <h2 class="blind">주메뉴</h2>
         <ul class="gnb">
           <li><a href="#section1">Profile</a></li>
-          <li><a href="#section2">Skills</a></li>
-          <li><a href="#section3">Portfolio</a></li>
+          <li><a href="#section2">Portfolio</a></li>
+          <li><a href="#section3">Skills</a></li>
           <li><a href="#section4">Contact</a></li>
         </ul>
       </nav>
@@ -52,46 +56,85 @@
             </ul>
         </div>
       </section><!--//profile-->
-      <section id="section2" class="inner"><!--skills-->
-        <h2>Skills</h2>
-        <p>저는 이런 스킬들을 가지고 있어요.</p>
-        <div class="skills">
-          <ul class="coding flex">
-            <li><img src="images/html.png" alt="html"></li>
-            <li><img src="images/css.png" alt="css"></li>
-            <li><img src="images/javascript.png" alt="javascript"></li>
-            <li><img src="images/jquery.png" alt="jquery"></li>
-          </ul>
-          <ul class="design flex">
-            <li><img src="images/photo.png" alt="photoshop"></li>
-            <li><img src="images/illustration.png" alt="illustration"></li>
-            <li><img src="images/xd.png" alt="adobeXD"></li>
-            <li><img src="images/figma.png" alt="figma"></li>
-          </ul>
-        </div>
-      </section><!--//skills-->
-      <div id="section3"><!--Portfolio-->
+      <div id="section2"><!--Portfolio-->
         <h2 class="inner">Portfolio</h2>
           <section class="web">
-            <h3>Web Design <i class="xi-pen"></i></h3>
-            <h4>궁디팡팡 캣페스타</h4>
-            <p>적응형 홈페이지 | html,css | 2일</p>
+            <div class="title">
+              <h3>Web Design <i class="xi-pen"></i></h3>
+              <h4>이미지에 마우스를 올려보세요!</h4>
+              <p>적응형 홈페이지 | Html,CSS | 2일</p>
+            </div>
             <ul class="flex">
-              <li><a href="#"><img src="images/gdppcat.png" alt="궁디팡팡캣페스타"></a></li>
-              <li><a href="#"><img src="images/A'ddict.png" alt="에이딕트"></a></li>
-              <li><a href="#"><img src="images/naverclover.png" alt="네이버 클로바"></a></li>
-              <li><a href="#"><img src="images/listen.png" alt="당신을 듣다"></a></li>
+              <li class="page1 Typo">
+                <a href="mypage/GDPP/GDPP.html" target="_blank">
+                <img src="images/gdppcat.jpg" alt="궁디팡팡캣페스타">
+                <i class="xi-plus-circle"></i>
+                </a>
+              </li>
+              <li class="page2 Typo">
+                <a href="mypage/A'ddict/A'ddict.html" target="_blank">
+                <img src="images/A'ddict.jpg" alt="에이딕트">
+                <i class="xi-plus-circle"></i>
+                </a>
+              </li>
+              <li class="page3 Typo">
+                <a href="mypage/NaverClover/NaverClover.html" target="_blank">
+                <img src="images/naverclover.jpg" alt="네이버 클로바">
+                <i class="xi-plus-circle"></i>
+              </a>
+            </li>
+              <li class="page4 Typo">
+                <a href="mypage/Listen/Listen.html" target="_blank">
+                <img src="images/listen.jpg" alt="당신을 듣다">
+                <i class="xi-plus-circle"></i>
+                </a>
+              </li>
             </ul>
           </section>
           <section class="reWeb">
             <h3>Web Re-design <i class="xi-rotate-left"></i></h3>
             <h4>SHAKE SHACK</h4>
-            <p>적응형 홈페이지 | html,css,jQuery | 3일</p>
-            <ul class="flex">
-              <li><a href="#"><img src="images/ss_original.png" alt="쉐이크쉑 기존"></a></li>
-              <li><a href="#"><img src="images/ss_renew.jpg" alt="쉐이크쉑 리뉴얼"></a></li>
-            </ul>
-            <span><img src="images/next.png" alt="화살표"></span>
+            <p>적응형 홈페이지 | Html CSS Javascript jQuery | 5일</p>
+            <div class="reNew flex">
+              <div class="update">
+                  <div>
+                    <img src="images/ss_original.jpg" alt="쉐이크쉑 기존"
+                    title="기존 사이트">
+                  </div>
+                  <div>
+                    <img src="images/ss_renew.jpg" alt="쉐이크쉑 리뉴얼"
+                    title="리뉴얼된 사이트">
+                  </div>
+                </div>
+                <img src="images/computer.png" alt="computer" class="monitor">
+                <div class="discription">
+                  <div class="box">
+                    <h5>Q. 어떻게 리뉴얼 되었나요?</h5>
+                    <ul>
+                      <li>
+                        <i class="xi-star"></i>
+                        화면을 가득하게 채워 <span>시원한</span> 느낌을 주었어요.</li>
+                      <li>
+                        <i class="xi-star"></i>
+                        MainVisual 부분이 <span>스타일리시</span>하게 변했어요.
+                      </li>
+                      <li>
+                        <i class="xi-star"></i>
+                        메뉴 종류를 <span>한번</span>에 볼 수 있어요.</li>
+                    </ul>
+                    <div class="buttons flex"><!--기획서 및 사이트 링크-->
+                      <p class="btn_1">
+                        <a href="mypage/ShakeSack/ShakeSack.html" target="_blank">
+                          사이트 보기</a>
+                        </p>
+                      <p class="btn_2">
+                        <a href="images/notice.pdf" target="_blank">
+                          기획서 보기</a>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
           </section>
         <section class="myDesign">
           <h3>Design <i class="xi-palette"></i></h3>
@@ -99,28 +142,56 @@
             <ul class="photo flex">
               <li><img src="images/2022_seul.jpg" alt="2022설"></li>
               <li><img src="images/book.jpg" alt="책과 만년필"></li>
-              <li><img src="images/moon.png" alt="청풍명월"></li>
+              <li><img src="images/moon.jpg" alt="청풍명월"></li>
               <li><img src="images/GREAT.jpg" alt="GREAT"></li>
             </ul>
             <ul class="illur flex">
               <li><img src="images/spring.jpg" alt="봄 할인"></li>
               <li><img src="images/MUSIC_PRESENT.jpg" alt="MUSIC PRESENT"></li>
               <li><img src="images/Dolhareubang.jpg" alt="돌하르방"></li>
-              <li><img src="images/JOYFUL.png" alt="joyful"></li>
+              <li><img src="images/JOYFUL.jpg" alt="joyful"></li>
             </ul>
             </div>
-            <span class="button"><a href="https://alike-river-5df.notion.site/d46e299cb4e54d61a5e54fa561079c04?v=ea17caa4c4cd48358146ff4223b40b5c" target="_blank">+ MORE</a></span>
-            <!--장소영의 노션 포트폴리오 사이트를 새창으로 열기-->
+            <span class="button">
+              <a href="https://alike-river-5df.notion.site/d46e299cb4e54d61a5e54fa561079c04?v=ea17caa4c4cd48358146ff4223b40b5c" target="_blank">+ MORE</a>
+            </span>
         </section>
       </div><!--//Portfolio-->
+      <section id="section3" class="inner"><!--skills-->
+        <h2>Skills</h2>
+        <p>저는 이런 스킬들을 가지고 있고 <span class="highLight">꾸준히 공부중</span>이에요.</p>
+        <div class="skills">
+          <ul class="skill_1 flex">
+            <li><img src="images/html.png" alt="html"></li>
+            <li><img src="images/css.png" alt="css"></li>
+            <li><img src="images/bootstrap.png" alt="bootstrap"></li>
+            <li><img src="images/javascript.png" alt="javascript"></li>
+            <li><img src="images/jquery.png" alt="jquery"></li>
+          </ul>
+          <ul class="skill_2 flex">
+            <li><img src="images/photo.png" alt="photoshop"></li>
+            <li><img src="images/illustration.png" alt="illustration"></li>
+            <li><img src="images/xd.png" alt="adobeXD"></li>
+            <li><img src="images/figma.png" alt="figma"></li>
+            <li><img src="images/github.png" alt="github"></li>
+          </ul>
+        </div>
+      </section><!--//skills-->
       <section id="section4"><!--contact-->
         <div class="inner">
           <h2>Contact</h2>
           <p>Feel free to contact to me!</p>
           <ul class="info">
-            <li><i class="xi-mail"></i> E-mail: emily_jang@kakao.com</li>
-            <li><i class="xi-mobile"></i> Tel: +82-10-6262-7079</li>
-            <li><i class="xi-github"></i><a href="https://github.com/EmilyJang "target="_blank"> GitHub: github.com/EmilyJang</a></li>
+            <li><i class="xi-mail"></i>
+              E-mail: emily_jang@kakao.com
+            </li>
+            <li><i class="xi-mobile"></i>
+              Tel: +82-10-6262-7079
+            </li>
+            <li><i class="xi-github"></i>
+              <a href="https://github.com/ddoddiworld "target="_blank">
+              GitHub: github.com/ddoddiworld</a>
+            </li>
           </ul>
           <span class="meet">Hello!<br>Nice to <strong>meet</strong> you :)</span>
           <div class="tag">
@@ -129,6 +200,7 @@
           </div>
           </div>
       </section><!--//contact-->
+      <!--TOP 메뉴-->
       <p class="topMenu">
         <a href="#header"><img src="images/TOP.png" alt="TOP메뉴"></a>
       </p>
@@ -137,6 +209,5 @@
       <p>본 페이지는 개인 포트폴리오 용도로 사용됩니다.</p>
     </footer>
   </main>
-  <footer></footer>
 </body>
 </html>
