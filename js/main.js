@@ -1,5 +1,3 @@
-
-
 $(function(){
   $(".web .page1").mouseenter(function(){
     $(".title > h4").text("궁디팡팡 캣페스타");
@@ -39,14 +37,15 @@ $(function(){
     pager: false,
     speed: 100,
     slideWidth: 800,
-    autoHover: true,
-    captions: true
+    autoHover: false,
+    captions: true,
+    loop: true
   });
 
   $(window).scroll(function(){
     var height= $(document).scrollTop();
-    // console.log(height);
-    if(height > 300) {
+    //console.log(height);
+    if(height > 500) {
       $(".topMenu").show();
     } else {
       $(".topMenu").hide();
