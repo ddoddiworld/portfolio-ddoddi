@@ -10,178 +10,124 @@
   <link rel="stylesheet" href="css/default.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-  <script src="js/main.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <div class="header" id="header">
-      <h1><a href='index.html'><img src="images/Emily_logo.png" alt="logo"></a></h1>
-      <nav>
-        <h2 class="blind">주메뉴</h2>
-        <ul class="gnb">
-          <li><a href="#section1">Profile</a></li>
-          <li><a href="#section2">Portfolio</a></li>
-          <li><a href="#section3">Skills</a></li>
-          <li><a href="#section4">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="header" id="header">
+    <h1><a href='index.html'><img src="images/Emily_logo.png" alt="logo"></a></h1>
+    <nav>
+      <h2 class="blind">주메뉴</h2>
+      <ul class="gnb">
+        <li><a href="#section1">Profile</a></li>
+        <li><a href="#section2">Portfolio</a></li>
+        <li><a href="#section3">Skills</a></li>
+        <li><a href="#section4">Contact</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <div class="mainVisual">
+    <article class="mainVisual">
+      <p class="intro-text"><span class="s-typo">More</span><br>Creative!</p>
       <video muted autoplay loop>
         <source src="images/mainVisual.mp4" type="video/mp4">
       </video>
-      <div class="text">
-        <marquee width="600" height="200" direction="up" behavior="alternate">
-          Who AM I?</marquee>
-      </div>
-    </div>
+    </article>
     <!-- section -->
     <div class="section">
       <!--All section-->
       <section id="section1" class="inner">
         <!--profile-->
-        <div class="introduce flex">
+        <div class="introduce" data-aos="fade-up">
           <h2>Profile</h2>
-          <p><img src="images/jangsoyoung.jpg" alt="프로필사진"></p>
-          <div class="intro">
-            <p>안녕하세요!<br>
-              <strong class="highLight">'톡톡'</strong>한 퍼블리셔를 꿈꾸는<br>
-              장소영입니다.</p>
+          <div class="introduce-section flex">
+            <p><img src="images/jsy_3.jpg" alt="프로필사진"></p>
+            <div class="me">
+              <p class="text">안녕하세요!<br><span class="strong">톡톡 튀는 웹을 그리는</span> 장소영입니다.<br>
+                동적이고 감각적인 웹 구현에 흥미를 갖고 있습니다 :)</p>
+              <ul class="my_frofile">
+                <li>1996.2.13 | 경기도 용인시 처인구 모현읍 | INFJ</li>
+                <li>
+                  <span class="date">2021.09 ~ 2022.01</span>
+                  모바일UI/UX 반응형 웹디자인(웹퍼블리셔)과정 수료
+                </li>
+                <li>
+                  <span class="date">2019.12 ~ 2020.02</span>
+                  GTQ 그래픽기술(포토샵+일러스트)과정 수료
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul class="toktok">
-            <li><span>'talk talk'</span> 의사소통!</li>
-            <li><span>'ttok ttok'</span> 한 직원!</li>
-            <li><span>'tok tok'</span> 튀는 창의력!</li>
+        </div>
+      </section>
+      <section id="section2">
+        <!--Portfolio-->
+        <h2 class="inner">Portfolio</h2>
+        <div class="web">
+          <ul class="publishing inner">
+            <li data-aos="fade-right">
+              <div><img src="images/gamguri.jpg" alt="감규리"></div>
+              <div>
+                <h3>감규리</h3>
+                <span>창작 사이트 | 반응형 홈페이지 | HTML, CSS, jQuery, Float사용</span>
+                <button><a href="mypage/orange/orange.html" target="_blank">사이트 보기</a></button>
+              </div>
+            </li>
+            <li data-aos="fade-left">
+              <div class="img-R"><img src="images/listen_.jpg" alt="당신을 듣다"></div>
+              <div>
+                <h3>당신을 듣다</h3>
+                <span>클론 사이트 | 적응형 홈페이지 | HTML, CSS, Flex사용</span>
+                <button><a href="mypage/Listen/Listen.html" target="_blank">사이트 보기</a></button>
+              </div>
+            </li>
+            <li data-aos="fade-right">
+              <div><img src="images/addict_.jpg" alt="에이딕트"></div>
+              <div>
+                <h3>A'ddict</h3>
+                <span>클론 사이트 | 적응형 홈페이지 | HTML, CSS, Float사용</span>
+                <button><a href="mypage/A'ddict/A'ddict.html" target="_blank">사이트 보기</a></button>
+              </div>
+            </li>
+            <li data-aos="fade-left">
+              <div class="img-R"><img src="images/gdppcat_.jpg" alt="궁디팡팡캣페스타"></div>
+              <div>
+                <h3>궁디팡팡 캣페스타</h3>
+                <span>클론 사이트 | 적응형 홈페이지 | HTML, CSS, Float사용</span>
+                <button><a href="mypage/GDPP/GDPP.html" target="_blank">사이트 보기</a></button>
+              </div>
+            </li>
+            <li class="shake" data-aos="fade-right">
+              <div><img src="images/shakeshak_.jpg" alt="SHAKESACK"></div>
+              <div>
+                <h3>SHAKE SHACK</h3>
+                <span>리디자인 사이트 | 적응형 홈페이지 | HTML, CSS, jQuery, Flex사용</span>
+                <button><a href="mypage/ShakeSack/ShakeSack.html" target="_blank">사이트 보기</a></button>
+                <button><a href="images/WebReDesign_SHAKESHACK_JSY.pdf" target="_blank">기획서 보기</a></button>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
-      <div id="section2">
-        <!--Portfolio-->
-        <h2 class="inner">Portfolio</h2>
-        <section class="web">
-          <div class="title">
-            <h3>Web Design <i class="xi-pen"></i></h3>
-            <h4>이미지에 마우스를 올려보세요!</h4>
-            <p>적응형 홈페이지 | Html,CSS | 2일</p>
-          </div>
-          <ul class="flex">
-            <li class="page1 Typo">
-              <a href="mypage/GDPP/GDPP.html" target="_blank">
-                <img src="images/gdppcat.jpg" alt="궁디팡팡캣페스타">
-                <i class="xi-plus-circle"></i>
-              </a>
-            </li>
-            <li class="page2 Typo">
-              <a href="mypage/A'ddict/A'ddict.html" target="_blank">
-                <img src="images/A'ddict.jpg" alt="에이딕트">
-                <i class="xi-plus-circle"></i>
-              </a>
-            </li>
-            <li class="page3 Typo">
-              <a href="mypage/NaverClover/NaverClover.html" target="_blank">
-                <img src="images/naverclover.jpg" alt="네이버 클로바">
-                <i class="xi-plus-circle"></i>
-              </a>
-            </li>
-            <li class="page4 Typo">
-              <a href="mypage/Listen/Listen.html" target="_blank">
-                <img src="images/listen.jpg" alt="당신을 듣다">
-                <i class="xi-plus-circle"></i>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="reWeb">
-          <h3>Web Re-design <i class="xi-rotate-left"></i></h3>
-          <h4>SHAKE SHACK</h4>
-          <p>적응형 홈페이지 | Html CSS Javascript jQuery | 5일</p>
-          <div class="reNew flex">
-            <div class="update">
-              <div>
-                <img src="images/ss_original.jpg" alt="쉐이크쉑 기존" title="기존 사이트">
-              </div>
-              <div>
-                <img src="images/ss_renew.jpg" alt="쉐이크쉑 리뉴얼" title="리뉴얼된 사이트">
-              </div>
-            </div>
-            <img src="images/computer.png" alt="computer" class="monitor">
-            <div class="discription">
-              <div class="box">
-                <h5>Q. 어떻게 리뉴얼 되었나요?</h5>
-                <ul>
-                  <li>
-                    <i class="xi-star"></i>
-                    화면을 가득하게 채워 <span>시원한</span> 느낌을 주었어요.</li>
-                  <li>
-                    <i class="xi-star"></i>
-                    MainVisual 부분이 <span>스타일리시</span>하게 변했어요.
-                  </li>
-                  <li>
-                    <i class="xi-star"></i>
-                    메뉴 종류를 <span>한번</span>에 볼 수 있어요.</li>
-                </ul>
-                <div class="buttons flex">
-                  <!--기획서 및 사이트 링크-->
-                  <p class="btn_1">
-                    <a href="mypage/ShakeSack/ShakeSack.html" target="_blank">
-                      사이트 보기</a>
-                  </p>
-                  <p class="btn_2">
-                    <a href="images/WebReDesign_SHAKESHACK_JSY.pdf" target="_blank">
-                      기획서 보기</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div><!--//reNew-->
-        </section>
-        <section class="App">
-          <h3>App UXUI <i class="xi-mobile"></i></h3>
-          <h4>Comma App</h4>
-          <p>Mobile UXUI | Figma | 14일</p>
-          <div class="screen flex inner">
-            <img src="images/app.jpg" alt="commaApp">
-            <h5>음악,<br>
-              <strong class="purple">시각적인</strong> 재미를<br>
-              더하다.
+      <section class="App" data-aos="flip-left">
+        <h3 id="app">Comma App</h3>
+        <p>창작 Mobile UXUI | Figma</p>
+        <div class="screen flex inner">
+          <img src="images/app.jpg" alt="commaApp">
+          <div class="contents-app">
+            <h5>음악,<br><strong class="purple">시각적인</strong> 재미를<br>더하다.
+              <span class="button">
+                <a href="images/comma_project.pdf" target="_blank">기획서 보기</a>
+              </span>
             </h5>
           </div>
-          <span class="button">
-            <a href="images/comma_project.pdf" target="_blank">기획서 보기</a>
-          </span>
-        </section>
-        <section class="myDesign">
-          <h3>Design <i class="xi-palette"></i></h3>
-          <div class="imgGroup">
-            <ul class="photo flex">
-              <li><img src="images/2022_seul.jpg" alt="2022설"></li>
-              <li><img src="images/book.jpg" alt="책과 만년필"></li>
-              <li><img src="images/moon.jpg" alt="청풍명월"></li>
-              <li><img src="images/GREAT.jpg" alt="GREAT"></li>
-            </ul>
-            <ul class="illur flex">
-              <li><img src="images/spring.jpg" alt="봄 할인"></li>
-              <li><img src="images/MUSIC_PRESENT.jpg" alt="MUSIC PRESENT"></li>
-              <li><img src="images/Dolhareubang.jpg" alt="돌하르방"></li>
-              <li><img src="images/JOYFUL.jpg" alt="joyful"></li>
-            </ul>
-          </div>
-          <span class="button">
-            <a href="https://alike-river-5df.notion.site/d46e299cb4e54d61a5e54fa561079c04?v=ea17caa4c4cd48358146ff4223b40b5c"
-              target="_blank">+ MORE</a>
-          </span>
-        </section>
-      </div>
+        </div>
+      </section>
       <section id="section3" class="inner">
         <!--skills-->
         <h2>Skills</h2>
-        <p>저는 이런 스킬들을 가지고 있고 <span class="highLight">꾸준히 공부중</span>이에요.</p>
-        <div class="skills">
+        <p class="skills-script">저는 이런 스킬들을 가지고 있고 <span class="highLight">꾸준히 공부중</span>이에요.</p>
+        <div class="skills" data-aos="zoom-in">
           <ul class="skill_1 flex">
             <li><img src="images/html.png" alt="html"></li>
             <li><img src="images/css.png" alt="css"></li>
@@ -200,9 +146,10 @@
       </section>
       <section id="section4">
         <!--contact-->
-        <div class="inner">
+        <div class="inner" data-aos="fade-up">
           <h2>Contact</h2>
-          <p>Feel free to contact to me!</p>
+          <p class="text-contact">아래 연락처로 연락주시면 감사하겠습니다!</p>
+          <p><img src="images/jsy.png" alt="jsy"></p>
           <ul class="info">
             <li><i class="xi-mail"></i>
               E-mail: emily_jang@kakao.com
@@ -215,11 +162,6 @@
                 GitHub: github.com/ddoddiworld</a>
             </li>
           </ul>
-          <span class="meet">Hello!<br>Nice to <strong>meet</strong> you :)</span>
-          <div class="tag">
-            <span class="hellow"><img src="images/jsy.png" alt="jsy"></span>
-            <span class="qr"><img src="images/emily_naver_QR.jpg" alt="QR"></span>
-          </div>
         </div>
       </section>
       <!--TOP 메뉴-->
@@ -227,10 +169,24 @@
         <a href="#header"><img src="images/TOP.png" alt="TOP메뉴"></a>
       </p>
     </div>
-    <footer>
-      <p>본 페이지는 개인 포트폴리오 용도로 사용됩니다.</p>
-    </footer>
   </main>
+  <footer>
+    <p>본 페이지는 개인 포트폴리오 용도로 사용됩니다.</p>
+  </footer>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+        var myAOS = function () {
+          AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+          });
+        }
+        myAOS();
+      </script>
 </body>
 
 </html>
