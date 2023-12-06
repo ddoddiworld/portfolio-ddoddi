@@ -1,4 +1,4 @@
-![image](https://github.com/ddoddiworld/portfolio-ddoddi/assets/93027502/ee8b13ac-cc85-4a90-bbc9-99ba63a60a07)# **Frontend Developer_장소영 💛**
+# **Frontend Developer_장소영 💛**
 > 사용자 경험(UX)을 연구하고 구현하는 것을 좋아하는 장소영입니다.</br>
 </br>
 
