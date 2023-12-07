@@ -7,185 +7,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>장소영 포트폴리오</title>
   <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-
-<body>
-  <header class="header" id="header">
-    <h1><a href='index.html'><img src="images/Emily_logo.png" alt="logo"></a></h1>
-    <nav>
-      <h2 class="blind">주메뉴</h2>
-      <ul class="gnb">
-        <li><a href="#section1">Profile</a></li>
-        <li><a href="#section2">Portfolio</a></li>
-        <li><a href="#section3">Skills</a></li>
-        <li><a href="#section4">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <article class="mainVisual">
-      <p class="intro-text"><span class="s-typo">More</span><br>Creative!</p>
-      <video muted autoplay loop>
-        <source src="images/mainVisual.mp4" type="video/mp4">
-      </video>
-    </article>
-    <!-- section -->
-    <div class="section">
-      <!--All section-->
-      <section id="section1" class="inner">
-        <!--profile-->
-        <div class="introduce" data-aos="fade-up">
-          <h2>Profile</h2>
-          <div class="introduce-section flex">
-            <p><img src="images/jsy_3.jpg" alt="프로필사진"></p>
-            <div class="me">
-              <p class="text">안녕하세요!<br><span class="strong">톡톡 튀는 웹을 그리는</span> 장소영입니다.<br>
-                동적이고 감각적인 웹 구현에 흥미를 갖고 있습니다 :)</p>
-              <ul class="my_frofile">
-                <li>1996.2.13 | 경기도 용인시 처인구 모현읍 | INFJ</li>
-                <li>
-                  <span class="date">2021.09 ~ 2022.01</span>
-                  모바일UI/UX 반응형 웹디자인(웹퍼블리셔)과정 수료
-                </li>
-                <li>
-                  <span class="date">2019.12 ~ 2020.02</span>
-                  GTQ 그래픽기술(포토샵+일러스트)과정 수료
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="section2">
-        <!--Portfolio-->
-        <h2 class="inner">Portfolio</h2>
-        <div class="web">
-          <ul class="publishing inner">
-            <li data-aos="fade-right">
-              <div><img src="images/gamguri.jpg" alt="감규리"></div>
-              <div>
-                <h3>감규리</h3>
-                <span>창작 사이트 | 반응형 홈페이지 | HTML, CSS, jQuery, Float사용</span>
-                <button><a href="mypage/orange/orange.html" target="_blank">사이트 보기</a></button>
-              </div>
-            </li>
-            <li data-aos="fade-left">
-              <div class="img-R"><img src="images/listen_.jpg" alt="당신을 듣다"></div>
-              <div>
-                <h3>당신을 듣다</h3>
-                <span>클론 사이트 | 적응형 홈페이지 | HTML, CSS, Flex사용</span>
-                <button><a href="mypage/Listen/Listen.html" target="_blank">사이트 보기</a></button>
-              </div>
-            </li>
-            <li data-aos="fade-right">
-              <div><img src="images/addict_.jpg" alt="에이딕트"></div>
-              <div>
-                <h3>A'ddict</h3>
-                <span>클론 사이트 | 적응형 홈페이지 | HTML, CSS, Float사용</span>
-                <button><a href="mypage/A'ddict/A'ddict.html" target="_blank">사이트 보기</a></button>
-              </div>
-            </li>
-            <li data-aos="fade-left">
-              <div class="img-R"><img src="images/gdppcat_.jpg" alt="궁디팡팡캣페스타"></div>
-              <div>
-                <h3>궁디팡팡 캣페스타</h3>
-                <span>클론 사이트 | 적응형 홈페이지 | HTML, CSS, Float사용</span>
-                <button><a href="mypage/GDPP/GDPP.html" target="_blank">사이트 보기</a></button>
-              </div>
-            </li>
-            <li class="shake" data-aos="fade-right">
-              <div><img src="images/shakeshak_.jpg" alt="SHAKESACK"></div>
-              <div>
-                <h3>SHAKE SHACK</h3>
-                <span>리디자인 사이트 | 적응형 홈페이지 | HTML, CSS, jQuery, Flex사용</span>
-                <button><a href="mypage/ShakeSack/ShakeSack.html" target="_blank">사이트 보기</a></button>
-                <button><a href="images/WebReDesign_SHAKESHACK_JSY.pdf" target="_blank">기획서 보기</a></button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="App" data-aos="flip-left">
-        <h3 id="app">Comma App</h3>
-        <p>창작 Mobile UXUI | Figma</p>
-        <div class="screen flex inner">
-          <img src="images/app.jpg" alt="commaApp">
-          <div class="contents-app">
-            <h5>음악,<br><strong class="purple">시각적인</strong> 재미를<br>더하다.
-              <span class="button">
-                <a href="images/comma_project.pdf" target="_blank">기획서 보기</a>
-              </span>
-            </h5>
-          </div>
-        </div>
-      </section>
-      <section id="section3" class="inner">
-        <!--skills-->
-        <h2>Skills</h2>
-        <p class="skills-script">저는 이런 스킬들을 가지고 있고 <span class="highLight">꾸준히 공부중</span>이에요.</p>
-        <div class="skills" data-aos="zoom-in">
-          <ul class="skill_1 flex">
-            <li><img src="images/html.png" alt="html"></li>
-            <li><img src="images/css.png" alt="css"></li>
-            <li><img src="images/bootstrap.png" alt="bootstrap"></li>
-            <li><img src="images/javascript.png" alt="javascript"></li>
-            <li><img src="images/jquery.png" alt="jquery"></li>
-          </ul>
-          <ul class="skill_2 flex">
-            <li><img src="images/photo.png" alt="photoshop"></li>
-            <li><img src="images/illustration.png" alt="illustration"></li>
-            <li><img src="images/xd.png" alt="adobeXD"></li>
-            <li><img src="images/figma.png" alt="figma"></li>
-            <li><img src="images/github.png" alt="github"></li>
-          </ul>
-        </div>
-      </section>
-      <section id="section4">
-        <!--contact-->
-        <div class="inner" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p class="text-contact">아래 연락처로 연락주시면 감사하겠습니다!</p>
-          <p><img src="images/jsy.png" alt="jsy"></p>
-          <ul class="info">
-            <li><i class="xi-mail"></i>
-              E-mail: emily_jang@kakao.com
-            </li>
-            <li><i class="xi-mobile"></i>
-              Tel: +82-10-6262-7079
-            </li>
-            <li><i class="xi-github"></i>
-              <a href="https://github.com/ddoddiworld " target="_blank">
-                GitHub: github.com/ddoddiworld</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!--TOP 메뉴-->
-      <p class="topMenu">
-        <a href="#header"><img src="images/TOP.png" alt="TOP메뉴"></a>
-      </p>
-    </div>
-  </main>
-  <footer>
-    <p>본 페이지는 개인 포트폴리오 용도로 사용됩니다.</p>
-  </footer>
+  <link rel="stylesheet" href="css/fullpage.css" />
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
+    integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+  <script src="js/fullpage.min.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    var myAOS = function () {
-      AOS.init({
-        easing: 'ease-out-back',
-        duration: 1000
-      });
+
+  <style>
+    #myVideo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center center;
+      background-size: contain;
+      object-fit: cover;
+      z-index: 3;
     }
-    myAOS();
+  </style>
+</head>
+
+<body>
+  <div id="fullpage">
+    <div class="section" id="section0">
+      <video id="myVideo" loop muted data-autoplay playsinline>
+        <source src="images/mainVisual.mp4" type="video/mp4">
+      </video>
+      <div class="layer">
+        <h1>fullPage.js videos</h1>
+        <p>Don't forget to add "playsinline" attribute to make it work on phones</p>
+      </div>
+    </div>
+
+    <div class="section" id="section1">
+      <div class="slide" id="slide1">
+        <h1>Slide Backgrounds</h1>
+      </div>
+      <div class="slide" id="slide2">
+        <h1>Totally customizable</h1>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <h1>Lovely images <br />for a lovely page</h1>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+      verticalCentered: true,
+      sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+    });
   </script>
 </body>
 
