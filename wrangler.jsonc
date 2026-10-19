@@ -1,0 +1,7 @@
+{
+  "name": "portfolio-ddoddi",
+  "compatibility_date": "2026-05-15",
+  "account_id": "0f6ea18eb346d60277312651cd01566a",
+  // Static site: the repo root is served as-is (exclusions in .assetsignore).
+  "assets": { "directory": "." }
+}
