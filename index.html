@@ -5,121 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>장소영 포트폴리오 · Frontend Developer</title>
   <meta name="description" content="웹 퍼블리셔에서 프론트엔드 개발자로. Vue·Nuxt 기반 서비스 화면, API 연동, 디자인 시스템, 외부 제휴 플로우를 만드는 장소영의 포트폴리오.">
+  <meta name="theme-color" content="#0A0A0B">
   <meta property="og:type" content="website">
   <meta property="og:title" content="장소영 포트폴리오">
-  <meta property="og:description" content="화면을 그리는 사람에서, 제품이 돌아가게 만드는 사람으로. 2022 → 2026 성장 기록.">
+  <meta property="og:description" content="From Publisher to Product. 화면을 그리는 사람에서, 제품이 돌아가게 만드는 사람으로. 2022 → 2026.">
   <meta property="og:image" content="images/jsy_3.jpg">
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header">
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<header class="site-header" id="header">
   <div class="wrap">
-    <a class="brand" href="#top">장소영 <small>Frontend Developer</small></a>
+    <a class="brand" href="#top"><i></i>Soyoung Jang</a>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="gnb" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
     <nav aria-label="주메뉴">
       <ul class="gnb" id="gnb">
+        <li><a href="#about">About</a></li>
         <li><a href="#journey">Journey</a></li>
-        <li><a href="#work">Projects</a></li>
-        <li><a href="#how">How I work</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#how">Process</a></li>
         <li><a href="#archive">Archive</a></li>
+        <li><a class="pill" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="소개">
+    <div class="hero-media" aria-hidden="true">
+      <video muted autoplay loop playsinline preload="metadata" poster="images/jsy_3.jpg">
+        <source src="images/mainVisual.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="wrap">
-      <div>
-        <p class="eyebrow">Portfolio · 2022 → 2026</p>
-        <h1 style="margin-top:.75rem">화면을 그리는 사람에서,<br><em>제품이 돌아가게 만드는 사람</em>으로.</h1>
-        <p class="lead">웹 퍼블리셔로 시작해 지금은 Vue·Nuxt 기반 서비스의 화면, API 연동, 디자인 시스템, 외부 제휴 플로우까지 맡는 프론트엔드 개발자입니다. 반려동물 헬스케어 플랫폼 인투펫과 동물병원 솔루션을 만드는 인투씨엔에스 개발3팀에서 일하고 있습니다.</p>
-        <div class="meta">
-          <span><b>Vue 3 · Nuxt · TypeScript</b></span>
-          <span>인투씨엔에스 개발3팀</span>
-          <span>2022.02 ~ 현재</span>
-        </div>
-        <div class="cta">
-          <a class="btn primary" href="#work">프로젝트 보기</a>
-          <a class="btn" href="#journey">성장 과정 보기</a>
-          <a class="btn" href="https://github.com/ddoddiworld" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
+      <div class="hero-kicker">
+        <span class="eyebrow">Frontend Developer</span><span class="dot"></span>
+        <span class="eyebrow" style="color:var(--muted)">Portfolio 2022 → 2026</span>
       </div>
-      <div class="hero-stats" aria-label="2026년 숫자">
-        <div><div class="n">1,170+</div><div class="l">2026년 커밋 · 10개 저장소</div></div>
-        <div><div class="n">3</div><div class="l">신규 서비스 구축</div></div>
-        <div><div class="n">181</div><div class="l">네이버 펫수첩 연동 커밋</div></div>
-        <div><div class="n">31</div><div class="l">디자인 시스템 컴포넌트</div></div>
+      <h1 class="hero-title">
+        <span class="line"><span>From</span></span>
+        <span class="line"><span class="outline">Publisher</span></span>
+        <span class="line"><span>To <em class="accent" style="font-style:normal">Product</em></span></span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-lead"><b>화면을 그리는 사람</b>에서, <b>제품이 돌아가게 만드는 사람</b>으로. Vue·Nuxt 기반 서비스의 화면과 연동, 디자인 시스템, 외부 제휴 플로우를 만듭니다.</p>
+        <ul class="hero-stats" aria-label="2026년 숫자">
+          <li><div class="n mono">1,170<small>+</small></div><div class="l">2026 commits · 10 repos</div></li>
+          <li><div class="n mono">3</div><div class="l">신규 서비스 구축</div></li>
+          <li><div class="n mono">31</div><div class="l">디자인 시스템 컴포넌트</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Vue 3</span><span>Nuxt</span><span>TypeScript</span><span>Design System</span><span>Naver Place+ Integration</span><span>Admin Fullstack</span><span>Playwright E2E</span><span>Figma Tokens</span>
+      <span>Vue 3</span><span>Nuxt</span><span>TypeScript</span><span>Design System</span><span>Naver Place+ Integration</span><span>Admin Fullstack</span><span>Playwright E2E</span><span>Figma Tokens</span>
+    </div>
+  </div>
+
+  <!-- ABOUT / MANIFESTO -->
+  <section class="band-paper manifesto" id="about">
+    <div class="wrap">
+      <div class="grid">
+        <p class="statement reveal">2022년, <span class="dim">HTML과 jQuery로 화면을 그리던 퍼블리셔</span>가 2026년에는 <mark>제휴 연동 플로우를 설계하고, 디자인 시스템을 만들고, 어드민 백엔드까지</mark> 다루는 프론트엔드 개발자가 되었습니다. 이 사이트는 그 4년의 기록입니다.</p>
+        <div class="side reveal" data-delay="1">
+          <p>반려동물 헬스케어 플랫폼 인투펫과 동물병원 솔루션을 만드는 인투씨엔에스 개발3팀에서 일하고 있습니다. 올해는 10개 저장소에 약 1,170개 커밋을 남겼고, 그중 3개는 빈 레포에서 시작한 신규 구축이었습니다.</p>
+          <div class="row"><span class="k">Role</span><span>Frontend Developer · 인투씨엔에스 개발3팀</span></div>
+          <div class="row"><span class="k">Stack</span><span>Vue 3 · Nuxt 3 · TypeScript · SCSS · Figma</span></div>
+          <div class="row"><span class="k">Since</span><span>2022.02 · 퍼블리셔로 입사, 2026 프론트엔드 개발</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="journey" id="journey">
+  <!-- JOURNEY -->
+  <section class="band-ink journey" id="journey">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Journey</p>
-        <h2>퍼블리셔에서 개발자로, 4년의 궤적</h2>
-        <p>연도순으로 읽히는 성장 기록입니다. 각 단계에서 무엇을 맡았고 무엇이 달라졌는지 적었습니다.</p>
+        <div><span class="eyebrow">Journey</span><h2 class="sec-title">Four years,<br>one direction</h2></div>
+        <p class="sec-sub">퍼블리셔에서 개발자로. 각 단계에서 무엇을 맡았고, 무엇이 달라졌는지 연도순으로 적었습니다.</p>
       </div>
-      <ol class="timeline">
-        <li class="tl-item reveal">
-          <div class="tl-when">2021.09 – 2022.01<b>출발점</b></div>
+      <ol class="tl">
+        <li class="tl-item">
+          <div class="tl-year">2022<small>2021.09 – 2022.01</small><span class="tag">Start</span></div>
           <div class="tl-body">
             <h3>웹 퍼블리셔 과정 수료, 클론·창작 사이트 5개</h3>
             <p>HTML·CSS·jQuery로 반응형·적응형 홈페이지를 만들며 레이아웃과 인터랙션의 기본을 익혔습니다. 이 포트폴리오 사이트의 첫 버전도 이때 만들었습니다.</p>
-            <a class="link" href="#archive">당시 작업 보기 ↓</a>
+            <a class="link-arrow" href="#archive">당시 작업 보기 <i>↓</i></a>
           </div>
         </li>
-        <li class="tl-item reveal">
-          <div class="tl-when">2026.01 – 02<b>혼자서 끝까지</b></div>
+        <li class="tl-item">
+          <div class="tl-year">01<small>2026.01 – 02</small><span class="tag">Solo build</span></div>
           <div class="tl-body">
             <h3>인투벳 클라우드 홈페이지 신규 구축</h3>
             <p>빈 레포에서 Vue 3 + Vite 세팅, 10개 섹션 PC/모바일 퍼블리싱, 스크롤 애니메이션, 문의·뉴스 API, 다국어(KR/EN/JP), GA/GTM 전환추적까지 약 4주 동안 혼자 구축해 오픈했습니다.</p>
             <p class="learn">퍼블리싱이 끝이 아니라 유효성 검사·sanitize·전환 측정·OG 메타까지 갖춰야 운영 가능한 사이트가 됩니다. 이때 세운 구조 위에서 베트남어 추가, 첨부파일 문의, 번들 최적화를 그대로 흡수했습니다.</p>
           </div>
         </li>
-        <li class="tl-item reveal">
-          <div class="tl-when">2026.03 – 07<b>화면에서 시스템으로</b></div>
+        <li class="tl-item">
+          <div class="tl-year">03<small>2026.03 – 07</small><span class="tag">Systemize</span></div>
           <div class="tl-body">
             <h3>인투펫 어드민 v4 리뉴얼</h3>
             <p>v2 어드민을 Nuxt 기반으로 재구축했습니다. 사이드바 13개 카테고리, 대시보드, 권한 그룹 시스템, 1:1 문의·FAQ·약관·광고&amp;이벤트 관리를 구현하고 AdminTable·Tabs·StatusChip·SearchBar를 표준 컴포넌트로 뽑아 기존 페이지를 전수 마이그레이션했습니다. 광고&amp;이벤트 관리는 배너 노출 로그까지 풀스택으로 구현했습니다.</p>
             <p class="learn">페이지를 빨리 만드는 것보다 페이지를 만드는 방법을 통일하는 것이 팀 전체 속도를 올립니다. 이 경험이 하반기 디자인 시스템으로 이어졌습니다.</p>
-            <button class="link" data-open="case-admin" style="background:none;border:0;padding:0;cursor:pointer;font:inherit">케이스 스터디 →</button>
+            <button class="link-arrow" data-open="case-admin">Case study <i>→</i></button>
           </div>
         </li>
-        <li class="tl-item reveal">
-          <div class="tl-when">2026.03 – 07<b>회사의 얼굴</b></div>
+        <li class="tl-item">
+          <div class="tl-year">03<small>2026.03 – 07</small><span class="tag">Company face</span></div>
           <div class="tl-body">
             <h3>인투씨엔에스 홈페이지 2026 리뉴얼</h3>
             <p>에이전시 정적 HTML을 Nuxt로 이식하고 20여 개 제품 페이지를 공통 컴포넌트로 통일했습니다. AI 소개 페이지는 시안 v1~v4를 직접 만들어 비교한 뒤 v5로 확정했고, ko/en 다국어·게시판·개인정보처리방침 API·SEO를 갖춰 6월 말 배포했습니다. 홈페이지 어드민의 게시판 동적 CRUD는 백엔드 엔티티·마이그레이션까지 직접 작업했습니다.</p>
             <p class="learn">큰 프로젝트일수록 한 번 잘 만들기보다 변경 비용을 낮추는 구조가 중요합니다. 배포 후 IntoPACS 개편이 페이지 단위로 빠르게 반영된 것이 그 증거였습니다.</p>
-            <button class="link" data-open="case-cns" style="background:none;border:0;padding:0;cursor:pointer;font:inherit">케이스 스터디 →</button>
+            <button class="link-arrow" data-open="case-cns">Case study <i>→</i></button>
           </div>
         </li>
-        <li class="tl-item reveal">
-          <div class="tl-when">2026.07 – 09<b>보이지 않는 곳</b></div>
+        <li class="tl-item">
+          <div class="tl-year">07<small>2026.07 – 09</small><span class="tag">Foundation</span></div>
           <div class="tl-body">
             <h3>인투펫 앱 v3 → v4 마이그레이션 기반 작업</h3>
             <p>sass @use 전환, 루트 폰트 50%→100%와 rem 1/2 변환, Pretendard 셀프 호스팅, prettier 통합. 마이페이지·데일리케어·shortlink 130여 파일을 TypeScript로 전환하고 typecheck 노이즈를 641건에서 51건으로 줄였습니다.</p>
             <p class="learn">눈에 보이는 결과물이 없는 작업을 설득하고 끝까지 밀어붙이는 법. 이 바닥이 없었다면 바로 다음 181커밋짜리 연동을 같은 속도로 할 수 없었습니다.</p>
           </div>
         </li>
-        <li class="tl-item reveal">
-          <div class="tl-when">2026.07 – 10<b>제품을 책임지다</b></div>
+        <li class="tl-item">
+          <div class="tl-year">07<small>2026.07 – 10</small><span class="tag">Ownership</span></div>
           <div class="tl-body">
             <h3>네이버 플레이스플러스 펫수첩 연동</h3>
             <p>네이버 제휴 동물병원의 내원내역을 인투펫 펫수첩으로 연동하는, 올해 가장 큰 외부 제휴 기능의 프론트 전체 플로우를 담당했습니다. 네아로 랜딩·비회원 가입·약관, 병원 선택·펫 매칭·연동/해지, AI 리포트 미리보기, 메인앱 진입점까지. 9월 17일 Beta를 오픈했습니다.</p>
             <p class="learn">기능을 구현하는 것과 출시하는 것은 다릅니다. 정책 변경, 외부 시스템의 예외, 배포 타이밍까지 포함해야 제품이 됩니다. 처음으로 담당자가 아니라 기능의 오너로 일했다고 느꼈습니다.</p>
-            <button class="link" data-open="case-naver" style="background:none;border:0;padding:0;cursor:pointer;font:inherit">케이스 스터디 →</button>
+            <button class="link-arrow" data-open="case-naver">Case study <i>→</i></button>
           </div>
         </li>
-        <li class="tl-item is-now reveal">
-          <div class="tl-when">2026.09 – 현재<b>다음 사람을 빠르게</b></div>
+        <li class="tl-item">
+          <div class="tl-year">09<small>2026.09 – now</small><span class="tag">For the team</span></div>
           <div class="tl-body">
             <h3>IDS 디자인 시스템과 셀러 포털</h3>
             <p>커머스 어드민 두 개를 새로 만들어야 하는 상황에서, Figma 토큰 기준 공통 컴포넌트 31종과 아이콘 39종을 먼저 만들고 쇼케이스로 문서화했습니다. 그 위에서 셀러 포털 S-00~S-19 화면을 mock으로 먼저 퍼블리싱해 백엔드와 병렬로 진행하고, swagger가 나오는 대로 실연동하며 Playwright E2E를 작성하고 있습니다.</p>
@@ -130,187 +160,192 @@
     </div>
   </section>
 
-  <section id="work">
+  <!-- WORK -->
+  <section class="band-paper" id="work">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Featured projects</p>
-        <h2>깊게 본 세 가지</h2>
-        <p>회사 서비스라 코드는 공개할 수 없어 상황·역할·문제·해결·결과 순서로 정리했습니다. 카드를 누르면 상세가 열립니다.</p>
+        <div><span class="eyebrow">Selected work</span><h2 class="sec-title">Three<br>case studies</h2></div>
+        <p class="sec-sub">회사 서비스라 코드는 공개하지 않습니다. 상황 · 역할 · 문제 · 해결 · 결과 순서로 정리했습니다. 카드를 누르면 상세가 열립니다.</p>
       </div>
       <div class="cases">
         <button class="case reveal" data-open="case-naver">
-          <div class="thumb">screenshot · 연동 플로우</div>
-          <div class="tags"><span class="tag">Nuxt</span><span class="tag">TypeScript</span><span class="tag">외부 연동</span></div>
-          <h3>네이버 플레이스플러스 펫수첩 연동</h3>
-          <p>네이버 웹뷰·OAuth·앱 브릿지가 얽힌 제휴 플로우를 설계부터 Beta 오픈까지.</p>
-          <span class="more">자세히 보기 →</span>
+          <div class="thumb"><span>screenshot · 연동 플로우</span><div class="cta">Open case</div></div>
+          <div class="body">
+            <div class="idx"><span>Case 01</span><span>2026.07 – 10</span></div>
+            <h3>네이버 플레이스플러스 펫수첩 연동</h3>
+            <p>네이버 웹뷰·OAuth·앱 브릿지가 얽힌 제휴 플로우를 설계부터 Beta 오픈까지.</p>
+            <div class="tags"><span class="tag">Nuxt</span><span class="tag">TypeScript</span><span class="tag">External API</span></div>
+          </div>
         </button>
-        <button class="case reveal" data-open="case-cns">
-          <div class="thumb">screenshot · 제품 페이지</div>
-          <div class="tags"><span class="tag">Nuxt</span><span class="tag">i18n</span><span class="tag">풀스택</span></div>
-          <h3>인투씨엔에스 홈페이지 2026</h3>
-          <p>제품 20여 종을 하나의 컴포넌트 체계로. 이미지 85MB를 3.7MB로.</p>
-          <span class="more">자세히 보기 →</span>
+        <button class="case reveal" data-delay="1" data-open="case-cns">
+          <div class="thumb"><span>screenshot · 제품 페이지</span><div class="cta">Open case</div></div>
+          <div class="body">
+            <div class="idx"><span>Case 02</span><span>2026.03 – 07</span></div>
+            <h3>인투씨엔에스 홈페이지 2026</h3>
+            <p>제품 20여 종을 하나의 컴포넌트 체계로. 이미지 85MB를 3.7MB로.</p>
+            <div class="tags"><span class="tag">Nuxt</span><span class="tag">i18n</span><span class="tag">Fullstack</span></div>
+          </div>
         </button>
-        <button class="case reveal" data-open="case-admin">
-          <div class="thumb">screenshot · 어드민 · IDS</div>
-          <div class="tags"><span class="tag">Nuxt</span><span class="tag">디자인 시스템</span><span class="tag">Figma 토큰</span></div>
-          <h3>인투펫 어드민 v4 · IDS 디자인 시스템</h3>
-          <p>운영 화면을 표준화한 경험을 컴포넌트 31종의 디자인 시스템으로 확장.</p>
-          <span class="more">자세히 보기 →</span>
+        <button class="case reveal" data-delay="2" data-open="case-admin">
+          <div class="thumb"><span>screenshot · 어드민 · IDS</span><div class="cta">Open case</div></div>
+          <div class="body">
+            <div class="idx"><span>Case 03</span><span>2026.03 – 10</span></div>
+            <h3>인투펫 어드민 v4 · IDS 디자인 시스템</h3>
+            <p>운영 화면을 표준화한 경험을 컴포넌트 31종의 디자인 시스템으로 확장.</p>
+            <div class="tags"><span class="tag">Nuxt</span><span class="tag">Design System</span><span class="tag">Figma Tokens</span></div>
+          </div>
         </button>
       </div>
 
-      <div class="sec-head" style="margin-top:4rem">
-        <p class="eyebrow">More work</p>
-        <h2>2026년에 한 나머지 일</h2>
+      <div class="sec-head" style="margin-top:clamp(4rem,8vw,7rem)">
+        <div><span class="eyebrow">More work</span><h2 class="sec-title" style="font-size:clamp(2rem,1.2rem + 3.5vw,4rem)">Everything else<br>in 2026</h2></div>
       </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>기간</th><th>프로젝트</th><th>서비스</th><th>요약</th></tr></thead>
-          <tbody>
-            <tr><td class="when">2026.01–02</td><td class="name">인투벳 클라우드 홈페이지</td><td><span class="pill">인투벳</span></td><td class="sum">Vue 3+Vite 원페이지 신규 구축, 다국어·GA/GTM, 172커밋</td></tr>
-            <tr><td class="when">2026.02–04</td><td class="name">마약류관리 보고 개선</td><td><span class="pill">인투벳 클라우드</span></td><td class="sum">NIMS 투약·구입/폐기 보고 유효성 검사와 수량 계산식 정비</td></tr>
-            <tr><td class="when">2026.03–05</td><td class="name">동반출입 PASS 개선·랜딩</td><td><span class="pill">인투펫 앱</span></td><td class="sum">QR 패스 UI 전면 개선, /qrpass 랜딩, 딥링크 차단, 접종증명서 다중 이미지</td></tr>
-            <tr><td class="when">2026.03–04</td><td class="name">동물병원 예약 프로세스 개편</td><td><span class="pill">인투펫 앱</span></td><td class="sum">4단계 Progressive Disclosure UI, 신규 Booking API 연동</td></tr>
-            <tr><td class="when">2026.03–05</td><td class="name">제휴 병원 질병 안내 페이지</td><td><span class="pill">shortlink</span></td><td class="sum">네이버 플레이스플러스 제휴 병원 채널용 질병 상세 페이지, 명함 QR 랜딩</td></tr>
-            <tr><td class="when">2026.04–08</td><td class="name">홈페이지 어드민 게시판 동적 CRUD</td><td><span class="pill">인투씨엔에스</span></td><td class="sum">Board 엔티티·마이그레이션부터 관리 화면까지 4단계 이관, Tiptap 표, 정책 문서 버전 관리</td></tr>
-            <tr><td class="when">2026.03–05</td><td class="name">AI 개발 환경 구성</td><td><span class="pill">팀</span></td><td class="sum">Claude Code 가이드·Vue skills·자율 파이프라인 에이전트를 팀 자산으로 정착</td></tr>
-            <tr><td class="when">2026.07–09</td><td class="name">v3 → v4 마이그레이션 기반</td><td><span class="pill">인투펫 앱</span></td><td class="sum">sass @use, rem 체계, 폰트 셀프 호스팅, TS 전환 130+ 파일</td></tr>
-            <tr><td class="when">2026.09–</td><td class="name">셀러 커머스 어드민</td><td><span class="pill">커머스</span></td><td class="sum">S-00~S-19 mock 퍼블리싱 → swagger 실연동, Playwright E2E (진행중)</td></tr>
-            <tr><td class="when">연중</td><td class="name">인투펫 앱 안정화</td><td><span class="pill">인투펫 앱</span></td><td class="sum">Sentry 크래시 방어, 채팅 UX, 팔로우·펫 등록 중복 방지, 데일리케어 버그</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <ul class="worklist">
+        <li><span class="when">2026.01–02</span><span class="name">인투벳 클라우드 홈페이지</span><span class="svc">Intovet</span><span class="sum">Vue 3+Vite 원페이지 신규 구축, 다국어·GA/GTM, 172커밋</span></li>
+        <li><span class="when">2026.02–04</span><span class="name">마약류관리 보고 개선</span><span class="svc">Intovet Cloud</span><span class="sum">NIMS 투약·구입/폐기 보고 유효성 검사와 수량 계산식 정비</span></li>
+        <li><span class="when">2026.03–05</span><span class="name">동반출입 PASS 개선·랜딩</span><span class="svc">Intopet App</span><span class="sum">QR 패스 UI 전면 개선, /qrpass 랜딩, 딥링크 차단, 접종증명서 다중 이미지</span></li>
+        <li><span class="when">2026.03–04</span><span class="name">동물병원 예약 프로세스 개편</span><span class="svc">Intopet App</span><span class="sum">4단계 Progressive Disclosure UI, 신규 Booking API 연동</span></li>
+        <li><span class="when">2026.03–05</span><span class="name">제휴 병원 질병 안내 페이지</span><span class="svc">Shortlink</span><span class="sum">네이버 플레이스플러스 제휴 병원 채널용 질병 상세 페이지, 명함 QR 랜딩</span></li>
+        <li><span class="when">2026.04–08</span><span class="name">홈페이지 어드민 게시판 동적 CRUD</span><span class="svc">IntoCNS</span><span class="sum">Board 엔티티·마이그레이션부터 관리 화면까지 4단계 이관, Tiptap 표, 정책 문서 버전 관리</span></li>
+        <li><span class="when">2026.03–05</span><span class="name">AI 개발 환경 구성</span><span class="svc">Team</span><span class="sum">Claude Code 가이드·Vue skills·자율 파이프라인 에이전트를 팀 자산으로 정착</span></li>
+        <li><span class="when">2026.07–09</span><span class="name">v3 → v4 마이그레이션 기반</span><span class="svc">Intopet App</span><span class="sum">sass @use, rem 체계, 폰트 셀프 호스팅, TS 전환 130+ 파일</span></li>
+        <li><span class="when">2026.09–</span><span class="name">셀러 커머스 어드민</span><span class="svc">Commerce</span><span class="sum">S-00~S-19 mock 퍼블리싱 → swagger 실연동, Playwright E2E (진행중)</span></li>
+        <li><span class="when">All year</span><span class="name">인투펫 앱 안정화</span><span class="svc">Intopet App</span><span class="sum">Sentry 크래시 방어, 채팅 UX, 팔로우·펫 등록 중복 방지, 데일리케어 버그</span></li>
+      </ul>
     </div>
   </section>
 
-  <section class="how" id="how">
+  <!-- HOW I WORK -->
+  <section class="band-ink" id="how">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">How I work</p>
-        <h2>쓰는 것, 해본 것, 일하는 방식</h2>
+        <div><span class="eyebrow">Process</span><h2 class="sec-title">How I<br>work</h2></div>
+        <p class="sec-sub">쓰는 것, 해본 것, 일하는 방식. 로고 나열 대신 실제로 한 일 기준으로 적었습니다.</p>
       </div>
       <div class="cols">
         <div class="reveal">
-          <h3>주력</h3>
+          <h3>Core</h3>
           <ul>
-            <li><b>Vue 3 · Nuxt 3</b> 서비스 화면, 레이아웃, 라우팅</li>
-            <li><b>TypeScript</b> 도메인 타입 모델, 점진적 전환</li>
-            <li><b>SCSS</b> 토큰, 반응형, 디자인 시스템 스타일</li>
-            <li><b>Figma</b> 시안 대조, 토큰 추출</li>
+            <li><b>Vue 3 · Nuxt 3</b><span>서비스 화면, 레이아웃, 라우팅</span></li>
+            <li><b>TypeScript</b><span>도메인 타입 모델, 점진적 전환</span></li>
+            <li><b>SCSS</b><span>토큰, 반응형, 디자인 시스템 스타일</span></li>
+            <li><b>Figma</b><span>시안 대조, 토큰 추출</span></li>
           </ul>
         </div>
-        <div class="reveal">
-          <h3>해본 것</h3>
+        <div class="reveal" data-delay="1">
+          <h3>Done</h3>
           <ul>
-            <li><b>외부 제휴 연동</b> OAuth 복귀, 웹뷰 스킴, 앱 브릿지, 아웃링크</li>
-            <li><b>어드민 백엔드</b> 엔티티·API·마이그레이션(Spring)</li>
-            <li><b>디자인 시스템</b> 컴포넌트 31종, 쇼케이스, 검증 스크립트</li>
-            <li><b>E2E</b> Playwright 명세 기반 시나리오</li>
-            <li><b>성능</b> WebP, 번들 스플리팅, 스크롤 jank 제거</li>
+            <li><b>외부 제휴 연동</b><span>OAuth 복귀, 웹뷰 스킴, 앱 브릿지, 아웃링크</span></li>
+            <li><b>어드민 백엔드</b><span>엔티티·API·마이그레이션(Spring)</span></li>
+            <li><b>디자인 시스템</b><span>컴포넌트 31종, 쇼케이스, 검증 스크립트</span></li>
+            <li><b>E2E</b><span>Playwright 명세 기반 시나리오</span></li>
+            <li><b>성능</b><span>WebP, 번들 스플리팅, 스크롤 jank 제거</span></li>
           </ul>
         </div>
-        <div class="reveal">
-          <h3>일하는 방식</h3>
+        <div class="reveal" data-delay="2">
+          <h3>Way</h3>
           <ul>
-            <li><b>mock 먼저</b> 백엔드와 병렬로, swagger 나오면 교체</li>
-            <li><b>표준화</b> 세 번 반복되면 컴포넌트로</li>
-            <li><b>문서</b> 인수인계·디자인 시스템 정본을 레포에</li>
-            <li><b>AI 개발 환경</b> 팀 가이드·에이전트 정착, velog TIL</li>
+            <li><b>mock 먼저</b><span>백엔드와 병렬로, swagger 나오면 교체</span></li>
+            <li><b>표준화</b><span>세 번 반복되면 컴포넌트로</span></li>
+            <li><b>문서</b><span>인수인계·디자인 시스템 정본을 레포에</span></li>
+            <li><b>AI 개발 환경</b><span>팀 가이드·에이전트 정착, velog TIL</span></li>
           </ul>
         </div>
       </div>
-      <div class="numbers">
-        <div><div class="n">31 / 39</div><div class="l">IDS 컴포넌트 / 아이콘</div></div>
-        <div><div class="n">130+</div><div class="l">TypeScript 전환 파일</div></div>
-        <div><div class="n">641 → 51</div><div class="l">typecheck 노이즈</div></div>
-        <div><div class="n">85 → 3.7MB</div><div class="l">홈페이지 이미지 용량</div></div>
-        <div><div class="n">20+</div><div class="l">공통 컴포넌트로 통일한 제품 페이지</div></div>
+      <div class="counters">
+        <div><div class="n"><span data-count="1170">0</span><small>+</small></div><div class="l">2026 commits</div></div>
+        <div><div class="n"><span data-count="31">0</span><small>/ 39</small></div><div class="l">IDS 컴포넌트 / 아이콘</div></div>
+        <div><div class="n"><span data-count="130">0</span><small>+</small></div><div class="l">TypeScript 전환 파일</div></div>
+        <div><div class="n"><span data-count="641">0</span><small>→ 51</small></div><div class="l">typecheck 노이즈</div></div>
+        <div><div class="n"><span data-count="85">0</span><small>→ 3.7MB</small></div><div class="l">홈페이지 이미지 용량</div></div>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <!-- CONTACT -->
+  <section class="band-paper contact" id="contact">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>함께 일하고 싶다면</h2>
-        <p class="muted">이메일이 가장 빠릅니다. 이력서와 상세 케이스 스터디는 요청 시 보내드립니다.</p>
-        <ul class="links">
-          <li><span class="k">Email</span><code id="email">emily_jang@kakao.com</code><button class="copy" data-copy="#email">복사</button></li>
-          <li><span class="k">GitHub</span><a href="https://github.com/ddoddiworld" target="_blank" rel="noopener">github.com/ddoddiworld ↗</a></li>
-          <li><span class="k">Velog</span><a href="https://velog.io/@ddoddiworld" target="_blank" rel="noopener">velog.io/@ddoddiworld ↗</a></li>
-        </ul>
-      </div>
-      <div class="writing reveal">
-        <p class="eyebrow">Writing</p>
-        <h3>TIL과 회고를 velog에 씁니다</h3>
-        <p>공부한 것과 프로젝트 회고를 꾸준히 기록합니다. 퍼블리셔에서 개발자로 넘어오는 과정이 글에 그대로 남아 있습니다.</p>
-        <a class="btn" style="margin-top:1rem" href="https://velog.io/@ddoddiworld" target="_blank" rel="noopener">글 보러 가기 ↗</a>
+      <h2 class="big reveal">Let's<br><span class="outline">talk.</span></h2>
+      <div class="grid">
+        <div class="reveal" data-delay="1">
+          <p class="lead">이메일이 가장 빠릅니다. 이력서와 상세 케이스 스터디는 요청 시 보내드립니다.</p>
+          <ul class="links">
+            <li><span class="k">Email</span><span class="v" id="email">emily_jang@kakao.com</span><button class="copy" data-copy="#email">Copy</button></li>
+            <li><span class="k">GitHub</span><a class="v" href="https://github.com/ddoddiworld" target="_blank" rel="noopener">github.com/ddoddiworld</a></li>
+            <li><span class="k">Velog</span><a class="v" href="https://velog.io/@ddoddiworld" target="_blank" rel="noopener">velog.io/@ddoddiworld</a></li>
+          </ul>
+        </div>
+        <div class="writing reveal" data-delay="2">
+          <span class="eyebrow">Writing</span>
+          <h3>TIL과 회고를 velog에 씁니다</h3>
+          <p>공부한 것과 프로젝트 회고를 꾸준히 기록합니다. 퍼블리셔에서 개발자로 넘어오는 과정이 글에 그대로 남아 있습니다.</p>
+          <a class="link-arrow" href="https://velog.io/@ddoddiworld" target="_blank" rel="noopener">Read posts <i>↗</i></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="archive" id="archive">
+  <!-- ARCHIVE -->
+  <section class="band-paper archive" id="archive">
     <div class="wrap">
       <details>
-        <summary><span>Archive · 2022 퍼블리셔 과정 수료작 <span class="muted">(HTML · CSS · jQuery)</span></span></summary>
+        <summary><span class="t">Archive · 2022 <span class="muted">퍼블리셔 과정 수료작 (HTML · CSS · jQuery)</span></span><i>+</i></summary>
         <ul class="arch-grid">
-          <li><b>감규리</b><span>창작 · 반응형 · Float</span><a href="mypage/orange/orange.html" target="_blank" rel="noopener" class="muted">사이트 보기 ↗</a></li>
-          <li><b>당신을 듣다</b><span>클론 · 적응형 · Flex</span><a href="mypage/Listen/Listen.html" target="_blank" rel="noopener" class="muted">사이트 보기 ↗</a></li>
-          <li><b>A'ddict</b><span>클론 · 적응형 · Float</span><a href="mypage/A'ddict/A'ddict.html" target="_blank" rel="noopener" class="muted">사이트 보기 ↗</a></li>
-          <li><b>궁디팡팡 캣페스타</b><span>클론 · 적응형 · Float</span><a href="mypage/GDPP/GDPP.html" target="_blank" rel="noopener" class="muted">사이트 보기 ↗</a></li>
-          <li><b>Shake Shack 리디자인</b><span>리디자인 · jQuery · 기획서</span><a href="images/WebReDesign_SHAKESHACK_JSY.pdf" target="_blank" rel="noopener" class="muted">기획서 보기 ↗</a></li>
-          <li><b>Comma App</b><span>모바일 UX/UI · Figma · 기획서</span><a href="images/comma_project.pdf" target="_blank" rel="noopener" class="muted">기획서 보기 ↗</a></li>
+          <li><b>감규리</b><span>창작 · 반응형 · Float</span><a href="mypage/orange/orange.html" target="_blank" rel="noopener">사이트 보기 ↗</a></li>
+          <li><b>당신을 듣다</b><span>클론 · 적응형 · Flex</span><a href="mypage/Listen/Listen.html" target="_blank" rel="noopener">사이트 보기 ↗</a></li>
+          <li><b>A'ddict</b><span>클론 · 적응형 · Float</span><a href="mypage/A'ddict/A'ddict.html" target="_blank" rel="noopener">사이트 보기 ↗</a></li>
+          <li><b>궁디팡팡 캣페스타</b><span>클론 · 적응형 · Float</span><a href="mypage/GDPP/GDPP.html" target="_blank" rel="noopener">사이트 보기 ↗</a></li>
+          <li><b>Shake Shack 리디자인</b><span>리디자인 · jQuery · 기획서</span><a href="images/WebReDesign_SHAKESHACK_JSY.pdf" target="_blank" rel="noopener">기획서 보기 ↗</a></li>
+          <li><b>Comma App</b><span>모바일 UX/UI · Figma · 기획서</span><a href="images/comma_project.pdf" target="_blank" rel="noopener">기획서 보기 ↗</a></li>
         </ul>
       </details>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="band-ink">
   <div class="wrap">
-    <span>© 2026 장소영. 본 페이지는 개인 포트폴리오 용도입니다.</span>
+    <span class="brand"><i></i>Soyoung Jang</span>
+    <span>© 2026 장소영 · 개인 포트폴리오</span>
     <span class="mono">HTML · CSS · Vanilla JS · Cloudflare Workers</span>
   </div>
 </footer>
 
-<button class="top" id="toTop" aria-label="맨 위로">↑</button>
+<button class="top" id="toTop" aria-label="맨 위로">Top</button>
 
-<!-- case study dialogs -->
+<!-- CASE DIALOGS -->
 <dialog class="sheet" id="case-naver">
   <div class="sheet-in">
     <div class="sheet-head">
-      <div><h3>네이버 플레이스플러스 펫수첩 연동</h3><p class="meta">2026.07 – 10 · 181커밋 · Nuxt · TypeScript · shortlink + 메인앱 + IDS</p></div>
+      <div><span class="eyebrow">Case 01</span><h3>네이버 플레이스플러스 펫수첩 연동</h3><p class="meta">2026.07 – 10 · 181 commits · Nuxt · TypeScript · shortlink + 메인앱 + IDS</p></div>
       <button class="close" data-close aria-label="닫기">×</button>
     </div>
-    <div class="thumb" style="aspect-ratio:16/7;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:.78rem;background:linear-gradient(135deg,var(--accent-soft),transparent 60%)">플로우 다이어그램 · 화면 캡처 자리</div>
+    <div class="shot">플로우 다이어그램 · 화면 캡처 자리</div>
     <dl class="steps">
-      <dt>상황</dt><dd>네이버 플레이스 제휴 동물병원의 내원내역을 인투펫 펫수첩으로 연동하는 신규 제휴 기능. 네이버 웹뷰, 아웃링크, OAuth(네아로), 앱 브릿지가 모두 얽혀 있었고 정책이 개발 중 여러 번 바뀌었습니다.</dd>
-      <dt>내 역할</dt><dd>프론트 전체 플로우 담당. 네아로 랜딩·비회원 가입·약관, 병원 선택·펫 매칭·연동 프로필 선택·완료/해지, AI 리포트 미리보기, 메인앱 마이페이지·펫 카드 진입점.</dd>
-      <dt>문제</dt><dd>
+      <dt>Context</dt><dd>네이버 플레이스 제휴 동물병원의 내원내역을 인투펫 펫수첩으로 연동하는 신규 제휴 기능. 네이버 웹뷰, 아웃링크, OAuth(네아로), 앱 브릿지가 모두 얽혀 있었고 정책이 개발 중 여러 번 바뀌었습니다.</dd>
+      <dt>Role</dt><dd>프론트 전체 플로우 담당. 네아로 랜딩·비회원 가입·약관, 병원 선택·펫 매칭·연동 프로필 선택·완료/해지, AI 리포트 미리보기, 메인앱 마이페이지·펫 카드 진입점.</dd>
+      <dt>Problem</dt><dd>
         <ul>
           <li>백엔드 케이스 코드(4101~4106)에 따라 화면 분기가 전부 달라지고, swagger가 바뀔 때마다 따라가야 했습니다.</li>
           <li>아웃링크 복귀(returnTo/state), OAuth 콜백 재진입, 네이버 웹뷰 닫기 실패, 앱 미설치 등 우리 서비스 밖에서 일어나는 실패가 많았습니다.</li>
           <li>약관 동의 저장 시점, 해지 범위(전체 ↔ 펫별) 같은 정책이 출시 직전까지 바뀌었습니다.</li>
         </ul>
       </dd>
-      <dt>해결</dt><dd>
+      <dt>Solution</dt><dd>
         <ul>
           <li>케이스 코드 기반 라우팅 테이블로 분기를 한곳에 모아 정책 변경 시 수정 범위를 좁혔습니다.</li>
           <li>consume 토큰 1회용 소비, OneLink 폴백, 창 닫기 실패 시 고정 URL 이동 등 실패 경로마다 폴백을 두었습니다.</li>
           <li>v3 mock → v4 이식 → 실연동 순서로 진행하고, 진입점 노출/비노출 배포 게이트를 반복 운영하며 인수인계 문서를 유지했습니다.</li>
         </ul>
       </dd>
-      <dt>결과</dt><dd>
+      <dt>Result</dt><dd>
         <div class="result">
           <div><div class="n">9/17</div><div class="l">펫수첩 Beta 오픈</div></div>
-          <div><div class="n">181</div><div class="l">커밋</div></div>
+          <div><div class="n">181</div><div class="l">commits</div></div>
           <div><div class="n">6</div><div class="l">케이스 코드 분기</div></div>
         </div>
       </dd>
-      <dt>배운 것</dt><dd>기능을 구현하는 것과 출시하는 것은 다릅니다. 정책 변경과 외부 시스템의 예외, 배포 타이밍까지 포함해야 제품이 됩니다. 처음으로 기능의 오너로 일했다고 느낀 프로젝트입니다.</dd>
+      <dt>Learned</dt><dd>기능을 구현하는 것과 출시하는 것은 다릅니다. 정책 변경과 외부 시스템의 예외, 배포 타이밍까지 포함해야 제품이 됩니다. 처음으로 기능의 오너로 일했다고 느낀 프로젝트입니다.</dd>
     </dl>
   </div>
 </dialog>
@@ -318,21 +353,21 @@
 <dialog class="sheet" id="case-cns">
   <div class="sheet-in">
     <div class="sheet-head">
-      <div><h3>인투씨엔에스 홈페이지 2026 리뉴얼</h3><p class="meta">2026.03 – 07 · 267커밋 · Nuxt · i18n · 어드민 백엔드 포함</p></div>
+      <div><span class="eyebrow">Case 02</span><h3>인투씨엔에스 홈페이지 2026 리뉴얼</h3><p class="meta">2026.03 – 07 · 267 commits · Nuxt · i18n · 어드민 백엔드 포함</p></div>
       <button class="close" data-close aria-label="닫기">×</button>
     </div>
-    <div class="thumb" style="aspect-ratio:16/7;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:.78rem;background:linear-gradient(135deg,var(--accent-soft),transparent 60%)">제품 페이지 · AI 페이지 캡처 자리</div>
+    <div class="shot">제품 페이지 · AI 페이지 캡처 자리</div>
     <dl class="steps">
-      <dt>상황</dt><dd>에이전시가 넘긴 정적 HTML을 Nuxt로 옮기고, 회사의 전 제품(EMR·PACS·LIS·결제·디바이스 등 20여 종)과 AI 소개 페이지를 하나의 사이트로 묶는 일. 올해 가장 많은 커밋이 들어간 프로젝트입니다.</dd>
-      <dt>내 역할</dt><dd>프론트 전체와 홈페이지 어드민(백엔드 포함). 제품 페이지 구조 설계, AI 페이지 시안 제작, 다국어, 게시판·정책 API 연동, 성능·SEO.</dd>
-      <dt>문제</dt><dd>
+      <dt>Context</dt><dd>에이전시가 넘긴 정적 HTML을 Nuxt로 옮기고, 회사의 전 제품(EMR·PACS·LIS·결제·디바이스 등 20여 종)과 AI 소개 페이지를 하나의 사이트로 묶는 일. 올해 가장 많은 커밋이 들어간 프로젝트입니다.</dd>
+      <dt>Role</dt><dd>프론트 전체와 홈페이지 어드민(백엔드 포함). 제품 페이지 구조 설계, AI 페이지 시안 제작, 다국어, 게시판·정책 API 연동, 성능·SEO.</dd>
+      <dt>Problem</dt><dd>
         <ul>
           <li>제품마다 페이지가 제각각이어서 카피 한 줄 바꾸는 데도 페이지를 열어야 했습니다.</li>
           <li>원본 이미지가 85MB, 스크롤이 끊기고 GSAP/Lenis null 에러가 콘솔을 채웠습니다.</li>
           <li>게시판 종류가 하드코딩되어 운영자가 게시판을 추가할 수 없었습니다.</li>
         </ul>
       </dd>
-      <dt>해결</dt><dd>
+      <dt>Solution</dt><dd>
         <ul>
           <li>ProductHero·Features·Spec·StepFlow·SystemGrid 등 공통 컴포넌트로 20여 제품을 통일. 제품 추가는 데이터 추가로 끝나게 했습니다.</li>
           <li>AI 소개 페이지 시안 v1~v4를 직접 만들어 비교한 뒤 v5 확정. 12종 모델 포트폴리오, 진료흐름 타임라인 구현.</li>
@@ -340,14 +375,14 @@
           <li>어드민 게시판을 Board 엔티티·마이그레이션 → 관리 화면 → 사이트 노출 관계 → 레거시 컬럼 제거의 4단계로 동적 CRUD 전환.</li>
         </ul>
       </dd>
-      <dt>결과</dt><dd>
+      <dt>Result</dt><dd>
         <div class="result">
           <div><div class="n">85 → 3.7MB</div><div class="l">이미지 용량</div></div>
           <div><div class="n">20+</div><div class="l">공통 컴포넌트로 통일한 제품</div></div>
           <div><div class="n">6월 말</div><div class="l">배포, 이후 페이지 단위 개편</div></div>
         </div>
       </dd>
-      <dt>배운 것</dt><dd>큰 프로젝트일수록 변경 비용을 낮추는 구조가 중요합니다. 프론트 개발자가 백엔드 엔티티까지 다룰 때 운영자가 개발 없이 콘텐츠를 늘릴 수 있는 제품이 나옵니다.</dd>
+      <dt>Learned</dt><dd>큰 프로젝트일수록 변경 비용을 낮추는 구조가 중요합니다. 프론트 개발자가 백엔드 엔티티까지 다룰 때 운영자가 개발 없이 콘텐츠를 늘릴 수 있는 제품이 나옵니다.</dd>
     </dl>
   </div>
 </dialog>
@@ -355,38 +390,37 @@
 <dialog class="sheet" id="case-admin">
   <div class="sheet-in">
     <div class="sheet-head">
-      <div><h3>인투펫 어드민 v4 · IDS 디자인 시스템</h3><p class="meta">2026.03 – 07 (어드민 133커밋) · 2026.09 – 10 (IDS 62커밋) · Nuxt · Figma 토큰</p></div>
+      <div><span class="eyebrow">Case 03</span><h3>인투펫 어드민 v4 · IDS 디자인 시스템</h3><p class="meta">2026.03 – 07 (어드민 133 commits) · 2026.09 – 10 (IDS 62 commits) · Nuxt · Figma 토큰</p></div>
       <button class="close" data-close aria-label="닫기">×</button>
     </div>
-    <div class="thumb" style="aspect-ratio:16/7;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:.78rem;background:linear-gradient(135deg,var(--accent-soft),transparent 60%)">어드민 화면 · IDS 쇼케이스 캡처 자리</div>
+    <div class="shot">어드민 화면 · IDS 쇼케이스 캡처 자리</div>
     <dl class="steps">
-      <dt>상황</dt><dd>상반기에는 v2 어드민을 Nuxt v4로 재구축해야 했고, 하반기에는 커머스 어드민 두 개를 11월 말까지 새로 만들어야 했습니다. 두 번 다 "페이지마다 테이블·검색·버튼이 제각각"인 상태에서 시작했습니다.</dd>
-      <dt>내 역할</dt><dd>어드민 핵심 운영 화면 구현과 공통 컴포넌트 표준화. 하반기에는 admin 레포 분리, IDS 디자인 시스템 설계·구현·문서화, 셀러 포털 퍼블리싱.</dd>
-      <dt>문제</dt><dd>
+      <dt>Context</dt><dd>상반기에는 v2 어드민을 Nuxt v4로 재구축해야 했고, 하반기에는 커머스 어드민 두 개를 11월 말까지 새로 만들어야 했습니다. 두 번 다 "페이지마다 테이블·검색·버튼이 제각각"인 상태에서 시작했습니다.</dd>
+      <dt>Role</dt><dd>어드민 핵심 운영 화면 구현과 공통 컴포넌트 표준화. 하반기에는 admin 레포 분리, IDS 디자인 시스템 설계·구현·문서화, 셀러 포털 퍼블리싱.</dd>
+      <dt>Problem</dt><dd>
         <ul>
           <li>수십 개 페이지의 UI 규칙이 달라 운영자 학습 비용과 개발 수정 비용이 함께 컸습니다.</li>
           <li>새 어드민을 같은 방식으로 만들면 같은 문제가 두 배로 생길 것이 뻔했습니다.</li>
         </ul>
       </dd>
-      <dt>해결</dt><dd>
+      <dt>Solution</dt><dd>
         <ul>
           <li>어드민 v4: AdminTable·Tabs·StatusChip·SearchBar·공용 모달을 표준으로 뽑고 전 페이지 마이그레이션. alert → useModal, 스타일 외부 분리, 다크모드 토큰화. 권한 그룹 시스템(메뉴 카탈로그·매트릭스·라우트 가드)과 광고&amp;이벤트 풀스택 구현.</li>
           <li>IDS: Figma Color/Typography 토큰 기준 컴포넌트 31종·아이콘 39종을 먼저 만들고 쇼케이스 페이지와 정본 문서로 공유. 금액·마스킹·KST 유틸과 vitest 검증, 공용 useApi 레이어.</li>
           <li>셀러 포털 S-00~S-19를 IDS로 mock 퍼블리싱해 백엔드와 병렬 진행, swagger 확정 순서로 실연동.</li>
         </ul>
       </dd>
-      <dt>결과</dt><dd>
+      <dt>Result</dt><dd>
         <div class="result">
           <div><div class="n">31 / 39</div><div class="l">컴포넌트 / 아이콘</div></div>
           <div><div class="n">19</div><div class="l">셀러 포털 화면(S-00~S-19)</div></div>
           <div><div class="n">1</div><div class="l">공유 디자인 시스템 정본</div></div>
         </div>
       </dd>
-      <dt>배운 것</dt><dd>페이지를 빨리 만드는 것보다 페이지를 만드는 방법을 통일하는 것이 팀 전체 속도를 올립니다. 1월에는 내가 빨리 만드는 법을, 10월에는 팀이 빨리 만들게 하는 법을 고민하고 있습니다.</dd>
+      <dt>Learned</dt><dd>페이지를 빨리 만드는 것보다 페이지를 만드는 방법을 통일하는 것이 팀 전체 속도를 올립니다. 1월에는 내가 빨리 만드는 법을, 10월에는 팀이 빨리 만들게 하는 법을 고민하고 있습니다.</dd>
     </dl>
   </div>
 </dialog>
-
 
 <script src="js/main.js"></script>
 </body>
