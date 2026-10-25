@@ -51,7 +51,7 @@ export class Comments {
       if (limit && limit.writes >= 10) return json({ error: '요청이 많습니다. 10분 후 다시 시도해 주세요.' }, 429);
       this.sql.exec('INSERT INTO limits(visitor, window, writes) VALUES (?, ?, 1) ON CONFLICT(visitor) DO UPDATE SET writes = writes + 1', visitor, now);
       let data; try { data = await request.json(); } catch { return json({ error: '잘못된 입력입니다.' }, 400); }
-      if (!data || typeof data !== 'object' || typeof data.password !== 'string' || data.password.length < 8 || data.password.length > 128) return json({ error: '비밀번호는 8~128자로 입력해 주세요.' }, 400);
+      if (!data || typeof data !== 'object' || typeof data.password !== 'string' || data.password.length < (request.method === 'DELETE' && data.admin === true ? 1 : 8) || data.password.length > 128) return json({ error: '비밀번호는 8~128자로 입력해 주세요.' }, 400);
       if (request.method === 'POST') {
         if (id) return json({ error: '잘못된 요청입니다.' }, 405);
         if (data.website) return json({ error: '등록할 수 없습니다.' }, 400);

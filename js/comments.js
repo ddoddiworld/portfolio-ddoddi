@@ -9,8 +9,9 @@
   dialog.className = 'comment-delete';
   dialog.innerHTML = '<form method="dialog"><h3>댓글 삭제</h3><label>삭제 비밀번호<input type="password" name="password" minlength="8" maxlength="128" required autocomplete="off"></label><label><span><input type="checkbox" name="admin"> 관리자 비밀번호로 삭제</span></label><p role="status"></p><button type="button" data-cancel>취소</button> <button type="submit">삭제</button></form>';
   document.body.append(dialog);
+  dialog.querySelector('[name="admin"]').addEventListener('change', event => { dialog.querySelector('[name="password"]').minLength = event.target.checked ? 1 : 8; });
   dialog.querySelector('[data-cancel]').onclick = () => dialog.close();
-  dialog.addEventListener('close', () => { dialog.querySelector('form').reset(); dialog.querySelector('[role="status"]').textContent = ''; });
+  dialog.addEventListener('close', () => { dialog.querySelector('form').reset(); dialog.querySelector('[name="password"]').minLength = 8; dialog.querySelector('[role="status"]').textContent = ''; });
   let selectedId;
   async function api(path, options) {
     const response = await fetch('/api/comments' + path, options);

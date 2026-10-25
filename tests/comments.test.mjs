@@ -5,7 +5,7 @@ import worker, { Comments } from '../server/worker.js';
 function setup() {
   const db = new DatabaseSync(':memory:');
   const sql = { exec(query, ...params) { const statement = db.prepare(query); return statement.columns().length ? statement.all(...params) : (statement.run(...params), []); } };
-  const comments = new Comments({ storage: { sql } }, { ADMIN_PASSWORD: 'admin-test-only' });
+  const comments = new Comments({ storage: { sql } }, { ADMIN_PASSWORD: 'admin07' });
   return { db, comments };
 }
 function req(method, path = '', data, ip = 'tester') { return new Request('https://portfolio.test/api/comments' + path, { method, headers: { 'Content-Type':'application/json', Origin:'https://portfolio.test', 'X-Visitor-IP':ip }, ...(data ? {body:JSON.stringify(data)} : {}) }); }
@@ -22,7 +22,7 @@ test('create, list without secrets, wrong password rejected, owner deletion', as
 test('admin can delete another author but wrong admin password cannot',async()=>{
   const {comments}=setup(); const {id}=await (await comments.fetch(req('POST','',content))).json();
   assert.equal((await comments.fetch(req('DELETE','/'+id,{password:'wrong-admin',admin:true}))).status,403);
-  assert.equal((await comments.fetch(req('DELETE','/'+id,{password:'admin-test-only',admin:true}))).status,200);
+  assert.equal((await comments.fetch(req('DELETE','/'+id,{password:'admin07',admin:true}))).status,200);
 });
 test('validation and rate limit reject abusive requests',async()=>{
   const {comments}=setup();
