@@ -33,7 +33,6 @@
         header.append(author, time, button); article.append(header, body); list.append(article);
       });
       cursor = data.next; more.hidden = !cursor;
-      if (!list.children.length) status.textContent = '첫 인사를 남겨주세요.';
     } catch (error) { status.textContent = error.message; }
     finally { more.disabled = false; }
   }
