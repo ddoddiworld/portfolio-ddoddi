@@ -4,3 +4,10 @@
 .wrangler
 README.md
 wrangler.jsonc
+
+server
+tests
+node_modules
+package*.json
+.dev.vars*
+.env*
