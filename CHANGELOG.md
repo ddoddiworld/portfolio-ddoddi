@@ -8,6 +8,11 @@ git checkout -b restore/v1 v1.0.0   # 그 버전으로 되돌릴 브랜치 만�
 ```
 
 ## [Unreleased]
+### Changed
+- 소개·타임라인 문구 축약, 반복 회고 및 커밋 수 제거, 기타 작업 접기
+### Added
+- 로그인 없는 방명록, 작성자 비밀번호 삭제 및 관리자 삭제 API
+- Cloudflare Durable Objects 저장소 및 댓글 동작 검증
 
 ## [2.0.0-rc.1] - 2026-10-20
 ### Changed
